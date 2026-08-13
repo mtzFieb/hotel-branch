@@ -1,4 +1,14 @@
-  <div class="form-horizontal">
+<% if (typeof erros !== "undefined" && erros.length > 0) { %>
+ 
+    <div class="alert alert-danger">
+        <% erros.forEach(erro => { %>
+            <p><%= erro.msg %></p>
+        <% }) %>
+    </div>
+ 
+<% } %>
+
+<div class="form-horizontal">
                 <hr />
                 <div class="form-group">
                     <label for="nome" class="control-label col-md-2">Nome</label>
